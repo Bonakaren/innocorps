@@ -1,0 +1,136 @@
+{
+	"step_1": {
+		"title": "How many acres does your farm spray during spring burnoff?",
+		"descr": "This ROI calculator assumes glyphosate is used and may be indicative of savings of other applications.",
+		"inputNumber": {
+			"value": "",
+			"step": 0.1,
+			"units": "ac",
+			"placeholder": "0 acres",
+			"additionalUnits": [
+				{
+					"labelSuffix": " ha",
+					"id": "ha",
+					"toFixed": 0
+				},
+				{
+					"labelSuffix": " section",
+					"id": "section",
+					"toFixed": 3
+				}
+			]
+		}
+	},
+	"step_2": {
+		"title": "What is your glyphosate application rate?",
+		"inputNumber": {
+			"value": 0.75,
+			"step": 0.001,
+			"units": "ac",
+			"placeholder": "0 L/ac",
+			"additionalUnits": [
+				{
+					"labelSuffix": " gal/ac",
+					"id": "gallons",
+					"toFixed": 5
+				}
+			]
+		}
+	},
+	"step_3": {
+		"title": "What is your current glyphosate cost?",
+		"range": {
+			"value": 10,
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"bubblePrefix": "$",
+			"bubbleSuffix": "/ac",
+			"units": "$/ac",
+			"additionalUnits": [
+				{
+					"labelPrefix": "$",
+					"labelSuffix": "/ L",
+					"id": "glyphosateCostLiters",
+					"toFixed": 2
+				},
+				{
+					"labelPrefix": "$",
+					"labelSuffix": "/ gal",
+					"id": "glyphosateCostGallons",
+					"toFixed": 2
+				}
+			]
+		}
+	},
+	"step_4": {
+		"title": "What is your water volume mixture rate?",
+		"range": {
+			"value": 8,
+			"min": 0,
+			"max": 30,
+			"step": 1,
+			"bubbleSuffix": " gal/ac",
+			"units": "gal/ac",
+			"additionalUnits": [
+				{
+					"labelSuffix": " L/ac",
+					"id": "LitersPerAcre",
+					"toFixed": 1
+				}
+			]
+		}
+	},
+	"step_5": {
+		"title": "Do you currently use ammonium sulfate (AMS) as an additive?",
+		"tip": "Following questions do not impact the calculation, but will help us determine requirements for the products",
+		"checklist": {
+			"type": "radio",
+			"value": "yes",
+			"list": [
+				{ "label": "NO", "id": "no" },
+				{ "label": "YES", "id": "yes" },
+				{ "label": "Sometimes", "id": "sometimes" }
+			]
+		}
+	},
+	"step_6": {
+		"title": "What is your current source of water for spraying (check any that apply)?",
+		"checklist": {
+			"type": "checkbox",
+			"list": [
+				{
+					"label": "hauled by you (select source from list)",
+					"checklist": {
+						"type": "checkbox",
+						"list": [
+							{ "label": "groundwater" },
+							{ "label": "surface water (lake/river/creek/irrigation channel)" },
+							{ "label": "dugout" },
+							{ "label": "municipal supply from town or city" },
+							{ "label": "water coop" }
+						]
+					}
+				},
+				{ "label": "delivered to you" },
+				{ "label": "other" }
+			]
+		}
+	},
+	"step_7": {
+		"title": "What water quality issues do you have with your current water source (check any that apply)?",
+		"checklist": {
+			"type": "checkbox",
+			"list": [
+				{ "label": "dirty/turbid/cloudy" },
+				{ "label": "very hard water (hardness ≥ 700 mg/L or ≥ 41 gpg)" },
+				{ "label": "iron and/or manganese" },
+				{ "label": "coloured" },
+				{ "label": "odorous" },
+				{ "label": "salty" },
+				{ "label": "other" },
+				{ "label": "none" }
+			]
+		}
+	}
+}
